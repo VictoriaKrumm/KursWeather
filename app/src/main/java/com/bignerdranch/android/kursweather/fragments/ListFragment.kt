@@ -38,11 +38,7 @@ class ListFragment: Fragment() {
         //mWeatherViewModel = ViewModelProvider(this).get(WeatherViewModel::class.java)
        mWeatherViewModel.getWeather.observe(viewLifecycleOwner, Observer { weather ->
            adapter.setData(weather) })
-        binding.floatingActionButton.setOnClickListener {
-            UpdateData()
-            Log.d("Debug ListFragment", "Click to Update Button")
-            /*findNavController().navigate(R.id.action_listFragment_to_loadFragment)*/
-        }
+
         return binding.root
     }
 
